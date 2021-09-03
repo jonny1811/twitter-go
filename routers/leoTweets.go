@@ -10,7 +10,7 @@ import (
 
 /*LeoTweets leo los tweets */
 func LeoTweets(w http.ResponseWriter, r *http.Request) {
-	ID := r.URL.Query().Get("ID")
+	ID := r.URL.Query().Get("id")
 	if len(ID) < 1 {
 		http.Error(w, "Debe enviar el parámetro id", http.StatusBadRequest)
 		return
